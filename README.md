@@ -7,8 +7,11 @@ A Spring Boot backend service to facilitate dynamic payments using Stripe. This 
 Generates a checkout session dynamically.
 Provides a unique checkout link for customers to complete payments.
 
-3. **Webhook Integration**
+2. **Webhook Integration**
 Implemented Stripe webhooks to handle checkout session events (e.g., payment success, cancellation).
 Ensures seamless event-driven updates to the system.
+
+3.**Payment Gateway Interface**
+Implemented a payment gateway interface for seamless integration with Stripe, ensuring modularity and extensibility for future payment gateways.
 
 Feel free to use this format for your GitHub documentation. Let me know if you need further refinements! 😊
