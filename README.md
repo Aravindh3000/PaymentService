@@ -11,7 +11,7 @@ Provides a unique checkout link for customers to complete payments.
 Implemented Stripe webhooks to handle checkout session events (e.g., payment success, cancellation).
 Ensures seamless event-driven updates to the system.
 
-3.**Payment Gateway Interface**
+4. **Payment Gateway Interface**
 Implemented a payment gateway interface for seamless integration with Stripe, ensuring modularity and extensibility for future payment gateways.
 
 Feel free to use this format for your GitHub documentation. Let me know if you need further refinements! 😊
