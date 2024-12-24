@@ -3,7 +3,6 @@ package com.scaler.paymentservice.controller;
 import com.scaler.paymentservice.dto.PaymentLinkRequest;
 import com.scaler.paymentservice.model.Product;
 import com.scaler.paymentservice.service.PaymentService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,5 +33,12 @@ public class PaymentController {
     @PostMapping("/{message}")
     public void stripeResponse(@PathVariable("message") String message) {
         System.out.println(message);
+    }
+
+    @PostMapping("/stripe_web_hook")
+    public ResponseEntity<Void> stripeWebHook(@RequestBody String metaData) {
+        System.out.println("<<<<<<<<<<< Stripe web hook >>>>>>>>>>>");
+        paymentService.handlePayment(metaData);
+        return ResponseEntity.ok().build();
     }
 }

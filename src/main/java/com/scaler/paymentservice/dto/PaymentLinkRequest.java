@@ -9,5 +9,5 @@ public class PaymentLinkRequest {
     private int customerId;
     private String customerName;
     private int productId;
-    private double price;
+    private int price;
 }

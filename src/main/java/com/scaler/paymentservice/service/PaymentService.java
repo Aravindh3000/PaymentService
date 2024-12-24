@@ -16,6 +16,7 @@ public class PaymentService{
 
     public PaymentService(PaymentGateway paymentGateway){
         this.paymentGateway = paymentGateway;
+        initializeProducts();
     }
     public String createPaymentLink(PaymentLinkRequest paymentLinkRequest) {
         return paymentGateway.createPaymentLink(paymentLinkRequest);
@@ -29,5 +30,9 @@ public class PaymentService{
 
     public List<Product> getProducts() {
         return productList;
+    }
+
+    public void handlePayment(String payload) {
+        paymentGateway.handlePayment(payload);
     }
 }
