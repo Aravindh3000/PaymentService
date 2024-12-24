@@ -25,8 +25,9 @@ public class StripePayment implements PaymentGateway {
             Map<String, Object> lineItem = new HashMap<>();
             lineItem.put("price_data", Map.of(
                     "currency", "usd",
-                    "product_data", Map.of("name", paymentLinkRequest.getDoctorName()),
-                    "unit_amount", paymentLinkRequest.getDoctorFee()
+                    "product_data", Map.of("productId", paymentLinkRequest.getProductId()),
+                    "customer_data", Map.of("name", paymentLinkRequest.getCustomerId()),
+                    "unit_amount", paymentLinkRequest.getPrice()
             ));
             lineItem.put("quantity", 1);
 

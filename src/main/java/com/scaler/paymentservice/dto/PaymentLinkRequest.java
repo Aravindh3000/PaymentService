@@ -7,8 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 public class PaymentLinkRequest {
     private int customerId;
-    private int orderId;
-    private String productName;
-    private Long doctorFee;
-    private String doctorName;
+    private String customerName;
+    private int productId;
+    private double price;
 }
