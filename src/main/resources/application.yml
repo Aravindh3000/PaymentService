@@ -1,0 +1,16 @@
+# application.yml
+server:
+  port: 8080
+
+spring:
+  application:
+    name: PaymentService
+
+stripe:
+  api-key: "${STRIPE_SECRET_KEY}"
+
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
